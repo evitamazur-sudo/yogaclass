@@ -1,0 +1,88 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+    background-color: #fdf5e6;
+    transition: all 0.5s ease;
+}
+
+h1, h2 {
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 3px;
+    color: #8b4513;
+}
+
+.intro-image, .packaging-image, .tutorials-image {
+    height: 600px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-image { background-image: url('https://images.pexels.com/photos/4534637/pexels-photo-4534637.jpeg'); }
+.packaging-image { background-image: url('https://images.pexels.com/photos/7055760/pexels-photo-7055760.jpeg'); }
+.tutorials-image { 
+    background-image: url('https://images.pexels.com/photos/8436626/pexels-photo-8436626.jpeg'); 
+    clip-path: polygon(0 10%, 100% 0, 100% 90%, 0% 100%);
+}
+
+.intro-text, .packaging-text {
+    padding: 100px 20px;
+    text-align: center;
+    background-color: #f4d0a5;
+}
+
+.intro-image__text, .packaging-image__text, .tutorials-image__text {
+    color: white;
+    font-size: 40px;
+    background-color: rgba(139, 69, 19, 0.4);
+    padding: 15px 30px;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.footer {
+    background-color: #8b4513;
+    color: white;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.social-links a { color: white; font-size: 28px; margin: 0 15px; text-decoration: none; }
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1200px) {
+    h1, h2 { color: #d2691e; }
+}
+
+@media screen and (max-width: 1024px) {
+    .intro-text, .packaging-text { background-color: #ffdead; }
+}
+
+@media screen and (max-width: 768px) {
+    .intro-image { 
+        background-image: url('https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg');
+        height: 450px;
+    }
+    .intro-image__text { font-size: 30px; }
+}
+
+@media screen and (max-width: 480px) {
+    body { background-color: #ffffff; }
+    .packaging-image { background-image: url('https://images.pexels.com/photos/4056723/pexels-photo-4056723.jpeg'); }
+    .intro-image__text, .packaging-image__text, .tutorials-image__text { 
+        font-size: 22px; 
+        background-color: rgba(0,0,0,0.6);
+    }
+}
